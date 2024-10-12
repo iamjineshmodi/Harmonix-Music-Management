@@ -1,42 +1,49 @@
-HarmoniX -> A music managemnet webapp to customise your playlists and listen to songs
+# HarmoniX 🎵  
+A Next.js-based music management web application that allows users to customize playlists and listen to songs with ease. HarmoniX is designed to streamline the organization and enjoyment of music collections with powerful features like playlist management, song liking, sharing, and playback controls.
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![HarmoniX Demo](./HarmonixHomePage.png)
 
-## Getting Started
+## Key Features
+- **User Authentication**: Integrated Google Authentication for a seamless login and signup experience.
+- **Playlist Customization**: Create, edit, and organize your playlists with ease.
+- **Music Playback**: Enjoy full playback control with Play, Pause, Next, Previous, Shuffle, and Repeat options.
+- **Like and Share Songs**: Like your favorite tracks and share them with others.
+- **User Profiles**: Edit your profile to personalize your music experience.
+- **Genre Exploration**: Browse and explore different music genres, tailored to your preferences.
 
-First, run the development server:
+## Technologies Used
+- **Next.js**: For building a fast and interactive user interface.
+- **MySQL**: To manage and store music data, playlists, and user information.
+- **Google Auth**: For secure user authentication.
+- **PL/SQL**: Used to implement 4 database triggers, 5 procedures, and optimized queries with indexes and keys for faster search results.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Project Structure
+- **Frontend Components**:
+  - `/components`: Reusable UI components like Sidebar, Navbar, Buttons, and Icons.
+  - `/pages`: Main pages such as Upload Song, Songs, Liked Songs, Genres, and Playlist management.
+  - Example Pages:
+    - `uploadsong.js`
+    - `songs.js`
+    - `signup.js`
+    - `login.js`
+    - `likedsongs.js`
+    - `index.js`
+    - `genres.js`
+    - `editprofile.js`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Backend and Database**:
+  - `/pages/api`: API routes to handle song data, user interactions, and playlist management.
+  - `/pages/db.js`: Database connection and queries managed using MySQL and PL/SQL procedures and triggers.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## How to Run
+1. Clone the repository.
+2. Install dependencies: `npm install`
+3. Set up a MySQL database and configure the connection in `db.js`.
+4. Start the development server: `npm run dev`
+5. Open [http://localhost:3000](http://localhost:3000) to view the app.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Future Enhancements
+- Add social media integrations for sharing playlists.
+- Introduce user-specific recommendations based on listening history.
+- Implement collaborative playlists for shared music experiences.
+- Use AI to suggest new songs to user based on their previous songs
